@@ -118,7 +118,7 @@ export default function Contact() {
                     </svg>
                   ),
                   label: 'Call Us',
-                  value: '+880 1711-0000',
+                  value: '+880 1919-216460',
                 },
                 {
                   icon: (

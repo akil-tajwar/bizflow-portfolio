@@ -13,7 +13,7 @@ export default function Hero() {
     setTimeout(() => {
       el.querySelectorAll('.hero-fade').forEach((node, i) => {
         setTimeout(() => {
-          (node as HTMLElement).style.opacity = '1'
+          ;(node as HTMLElement).style.opacity = '1'
           ;(node as HTMLElement).style.transform = 'translateY(0)'
         }, i * 150)
       })
@@ -30,7 +30,10 @@ export default function Hero() {
       id="home"
       ref={heroRef}
       className="relative min-h-screen flex items-center overflow-hidden"
-      style={{ background: 'linear-gradient(135deg, #0f1e3d 0%, #1a3a6b 50%, #1e4a8a 100%)' }}
+      style={{
+        background:
+          'linear-gradient(135deg, #0f1e3d 0%, #1a3a6b 50%, #1e4a8a 100%)',
+      }}
     >
       {/* Background image overlay */}
       <div className="absolute inset-0">
@@ -41,18 +44,31 @@ export default function Hero() {
           className="object-cover opacity-20"
           priority
         />
-        <div className="absolute inset-0" style={{ background: 'linear-gradient(135deg, rgba(15,30,61,0.85) 0%, rgba(26,58,107,0.75) 100%)' }} />
+        <div
+          className="absolute inset-0"
+          style={{
+            background:
+              'linear-gradient(135deg, rgba(15,30,61,0.85) 0%, rgba(26,58,107,0.75) 100%)',
+          }}
+        />
       </div>
 
       {/* Decorative elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #60a5fa, transparent)' }} />
-      <div className="absolute bottom-20 left-10 w-48 h-48 rounded-full opacity-5" style={{ background: 'radial-gradient(circle, #93c5fd, transparent)' }} />
+      <div
+        className="absolute top-20 right-10 w-72 h-72 rounded-full opacity-5"
+        style={{ background: 'radial-gradient(circle, #60a5fa, transparent)' }}
+      />
+      <div
+        className="absolute bottom-20 left-10 w-48 h-48 rounded-full opacity-5"
+        style={{ background: 'radial-gradient(circle, #93c5fd, transparent)' }}
+      />
 
       {/* Grid pattern */}
       <div
         className="absolute inset-0 opacity-5"
         style={{
-          backgroundImage: 'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
+          backgroundImage:
+            'linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)',
           backgroundSize: '60px 60px',
         }}
       />
@@ -87,7 +103,12 @@ export default function Hero() {
             }}
           >
             Transform Your{' '}
-            <span className="text-transparent bg-clip-text" style={{ backgroundImage: 'linear-gradient(135deg, #60a5fa, #34d399)' }}>
+            <span
+              className="text-transparent bg-clip-text"
+              style={{
+                backgroundImage: 'linear-gradient(135deg, #60a5fa, #34d399)',
+              }}
+            >
               Business Operations
             </span>
           </h1>
@@ -101,7 +122,8 @@ export default function Hero() {
               transition: 'opacity 0.6s ease, transform 0.6s ease',
             }}
           >
-            Streamline, automate, and optimize with our comprehensive ERP solutions, business intelligence, and AI-powered automation.
+            Streamline, automate, and optimize with our comprehensive ERP
+            solutions, business intelligence, and AI-powered automation.
           </p>
 
           {/* CTA Buttons */}
@@ -159,8 +181,16 @@ export default function Hero() {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-blue-200/50">
-        <span className="text-xs tracking-widest uppercase" style={{ fontFamily: 'Sora, sans-serif' }}>Scroll</span>
+      <div
+        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-blue-200/50 cursor-pointer"
+        onClick={() => handleScrollTo('#services')}
+      >
+        <span
+          className="text-xs tracking-widest uppercase"
+          style={{ fontFamily: 'Sora, sans-serif' }}
+        >
+          Scroll
+        </span>
         <div className="w-px h-8 bg-gradient-to-b from-blue-400/40 to-transparent animate-pulse" />
       </div>
     </section>

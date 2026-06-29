@@ -27,34 +27,42 @@ export default function Footer() {
           {/* Brand */}
           <div className="lg:col-span-2">
             <div className="flex items-center gap-3 mb-5">
-              <Image
-                src="/logo.png"
-                alt="BizFlow"
-                width={40}
-                height={40}
-                className="w-10 h-10 object-contain"
-              />
-              <span
+              <div className="bg-white rounded-lg">
+                <Image
+                  src="/logo.png"
+                  alt="BizFlow"
+                  width={100}
+                  height={100}
+                  className="w-20 h-20 object-contain"
+                />
+              </div>
+              {/* <span
                 className="font-bold text-xl text-white tracking-tight"
                 style={{ fontFamily: 'Sora, sans-serif' }}
               >
                 BIZFLOW
-              </span>
+              </span> */}
             </div>
             <p className="text-blue-200/50 text-sm leading-relaxed max-w-xs mb-6">
-              Transforming businesses through innovative technology solutions. Let&apos;s make your business flow.
+              Transforming businesses through innovative technology solutions.
+              Let&apos;s make your business flow.
             </p>
             {/* Social */}
             <div className="flex items-center gap-3">
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/company/bizflowdev/posts/?feedView=all"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-lg flex items-center justify-center text-blue-300 transition-all duration-300 hover:bg-blue-600 hover:text-white"
                 style={{ background: 'rgba(59,130,246,0.12)' }}
                 aria-label="LinkedIn"
               >
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
                   <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z" />
                   <circle cx="4" cy="4" r="2" />
                 </svg>
