@@ -7,6 +7,7 @@ const navLinks = [
   { label: 'Home', href: '#home' },
   { label: 'Services', href: '#services' },
   { label: 'About', href: '#about' },
+  { label: 'Portfolio', href: '#portfolio' },
   { label: 'Clients', href: '#clients' },
   { label: 'Contact', href: '#contact' },
 ]
@@ -21,7 +22,14 @@ export default function Navbar() {
       setScrolled(window.scrollY > 60)
 
       // Track active section
-      const sections = ['home', 'services', 'about', 'clients', 'contact']
+      const sections = [
+        'home',
+        'services',
+        'about',
+        'portfolio',
+        'clients',
+        'contact',
+      ]
       for (const section of [...sections].reverse()) {
         const el = document.getElementById(section)
         if (el && window.scrollY >= el.offsetTop - 120) {
@@ -35,7 +43,10 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
     e.preventDefault()
     const target = document.querySelector(href)
     if (target) {
@@ -66,7 +77,6 @@ export default function Navbar() {
             height={100}
             className="w-20 h-20 lg:w-33 lg:h-33 object-contain group-hover:scale-105 transition-transform duration-300"
           />
-          
         </a>
 
         {/* Desktop Nav Links */}
@@ -98,19 +108,6 @@ export default function Navbar() {
           })}
         </ul>
 
-        {/* CTA Button
-        <a
-          href="#contact"
-          onClick={(e) => handleNavClick(e, '#contact')}
-          className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 rounded-lg text-sm font-semibold text-white bg-blue-900/90 transition-all duration-300 hover:shadow-lg hover:shadow-blue-600/30 hover:-translate-y-0.5"
-          // style={{ background: 'var(--accent)', fontFamily: 'Sora, sans-serif' }}
-        >
-          Get Started
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a> */}
-
         {/* Mobile Hamburger */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
@@ -118,9 +115,15 @@ export default function Navbar() {
           aria-label="Toggle menu"
         >
           <div className="w-5 h-4 flex flex-col justify-between">
-            <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`} />
-            <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`} />
-            <span className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`} />
+            <span
+              className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? 'rotate-45 translate-y-1.5' : ''}`}
+            />
+            <span
+              className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? 'opacity-0' : ''}`}
+            />
+            <span
+              className={`block h-0.5 bg-current rounded-full transition-all duration-300 ${menuOpen ? '-rotate-45 -translate-y-2' : ''}`}
+            />
           </div>
         </button>
       </nav>
@@ -144,16 +147,6 @@ export default function Navbar() {
               </a>
             </li>
           ))}
-          {/* <li>
-            <a
-              href="#contact"
-              onClick={(e) => handleNavClick(e, '#contact')}
-              className="block mt-2 px-4 py-3 text-sm font-semibold text-white text-center rounded-lg transition-all duration-200"
-              style={{ background: 'var(--accent)', fontFamily: 'Sora, sans-serif' }}
-            >
-              Get Started
-            </a>
-          </li> */}
         </ul>
       </div>
     </header>
