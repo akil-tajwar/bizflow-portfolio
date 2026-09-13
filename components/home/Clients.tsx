@@ -10,6 +10,7 @@ const clients = [
   { id: 4, name: 'Niyama', logo: '/niyama.png' },
   { id: 5, name: 'Fashion Food', logo: '/fashion-food-logo.png' },
   { id: 6, name: 'Continental Group', logo: '/continental-group-logo.png' },
+  { id: 7, name: 'Taha Group', logo: '/taha-group-logo.png' },
 ]
 
 export default function Clients() {
