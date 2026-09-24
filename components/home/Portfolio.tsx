@@ -135,6 +135,59 @@ const projects = [
       },
     ],
   },
+  {
+    id: 3,
+    name: 'Track Bill',
+    image: '/trackbill-demo.png',
+    sourceLink: '/TrackBill_Features_Overview.pdf',
+    liveLink: 'https://track-bill.com/',
+    description:
+      'An expense, procurement & approval management system — covering bill claims, purchase orders, a configurable multi-stage approval matrix, vendor management, and even land record tracking.',
+    detailedDescription:
+      "Track Bill replaces scattered spreadsheets, email approvals, and paper vouchers with one connected system for managing everything a business spends money on — from an employee's reimbursement claim to a full purchase order to a land acquisition. Every claim and order moves through a configurable, multi-stage approval workflow, stays fully searchable, and rolls up into live dashboards so finance and management always know exactly where the money is going.",
+    functionalities: [
+      {
+        title: 'Bill & Expense Claims',
+        desc: 'Employees submit claims against configured bill types with attached supporting documents, tracked through Draft, Pending, Accepted, and Rejected states with payment type and date recorded on settlement.',
+      },
+      {
+        title: 'Purchase Orders',
+        desc: 'Structured purchase orders capturing PO type, buyer, vendor, payment instructions, and total amount, following the same status-tracked workflow as bill claims.',
+      },
+      {
+        title: 'Multi-Stage Approval Matrix',
+        desc: 'Configurable, per-bill-type and per-PO-type approval chains with an effective date and any number of ordered approval stages, so routing rules can evolve without disturbing claims already in progress.',
+      },
+      {
+        title: 'Vendor Management',
+        desc: 'A central vendor directory with contact details and banking information, reused automatically across every purchase order for consistent, accurate payments.',
+      },
+      {
+        title: 'Bill & PO Type Setup',
+        desc: 'Custom bill type and purchase order type categories that drive approval routing and feed directly into dashboard reporting.',
+      },
+      {
+        title: 'Item Catalog',
+        desc: 'A shared, centrally maintained list of items used when raising purchase orders, keeping naming consistent across buyers and vendors.',
+      },
+      {
+        title: 'Land Record Management',
+        desc: 'A dedicated module for tracking land purchases — donor details, deed number and price, registry expense, and full statutory RS/MR/PS/BS khatian and dag references, plus mutation tracking and document attachments.',
+      },
+      {
+        title: 'Company & User Management',
+        desc: 'A shared company profile alongside user accounts with per-user roles controlling access across bills, purchase orders, and approvals.',
+      },
+      {
+        title: 'Dashboard & Reporting',
+        desc: 'Live bill and purchase order counts with pending totals, plus month-wise bill payment and approved claim amount charts, filterable by bill type.',
+      },
+      {
+        title: 'Bill Query & Audit Trail',
+        desc: 'Detailed lookup for any bill showing its full approval log and current status, with supporting documents one click away for verification.',
+      },
+    ],
+  },
 ]
 
 type Project = (typeof projects)[0]
